@@ -1,0 +1,11 @@
+/*
+Theme Name: Foundry Child
+Theme URI: 
+Description: Child theme for the Foundry theme
+Author: <a href="http://www.madeinebor.com">Tom Rhodes</a>
+Author URI: 
+Template: foundry
+Version: 1.0.0
+*/
+
+@import url('../foundry/style.css');

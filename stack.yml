@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+
+  wordpress:
+    image: wordpress
+    restart: always
+    container_name: wp_drake
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: drake_user
+      WORDPRESS_DB_PASSWORD: soterosanz_161
+      WORDPRESS_DB_NAME: drake_db
+    volumes:
+      - ./public/:/var/www/html/
+
+  db:
+    image: mysql:5.7
+    restart: always
+    container_name: db_drake
+    environment:
+      MYSQL_DATABASE: drake_db
+      MYSQL_USER: drake_user
+      MYSQL_PASSWORD: soterosanz_161
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
